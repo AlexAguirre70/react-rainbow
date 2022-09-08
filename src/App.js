@@ -15,12 +15,15 @@ function App() {
     
     }
   )
+  const addColor = (newColor) =>{
+    setColors([...colors,newColor])
+  }
    return (
     <div className="App">
       {colorMap}
-      <ColorForm />
+      <ColorForm addColor={addColor}/>
     </div>
-  );
+  )
 }
 
 export default App;
